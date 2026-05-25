@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@theme {
+  --color-traditional-maroon: #3d0309;
+  --color-traditional-maroon-light: #5a0912;
+  --color-traditional-maroon-dark: #1f0104;
+  --color-traditional-gold: #D4AF37;
+  --color-traditional-gold-light: #F3E5AB;
+  --color-traditional-gold-dark: #AA7C11;
+  --color-traditional-cream: #FFFDD0;
+  --color-traditional-cream-dark: #F5E6C8;
+  --color-traditional-mustard: #E1A95F;
+
+  --font-tangerine: "Tangerine", cursive;
+  --font-playfair: "Playfair Display", serif;
+  --font-cinzel: "Cinzel", serif;
+  --font-cinzel-deco: "Cinzel Decorative", serif;
+  --font-montserrat: "Montserrat", sans-serif;
+
+  --animate-spin-slow: spin 20s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-fade-in-up: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #110103;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #AA7C11;
+}
+
+/* Base styles and variables */
+:root {
+  color-scheme: dark;
+}
+
+html, body, #root {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #110103;
+  color: #FFFDD0;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Card glassmorphism style */
+.royal-card {
+  background: rgba(61, 3, 9, 0.85);
+  border: 2px solid #D4AF37;
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.2), inset 0 0 15px rgba(212, 175, 55, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.gold-border-glow {
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FFFDD0 0%, #D4AF37 50%, #AA7C11 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-maroon-gradient {
+  background: linear-gradient(135deg, #5a0912 0%, #3d0309 50%, #1f0104 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom CSS for floral decorations */
+.flower-hanging {
+  background-image: radial-gradient(circle, #D4AF37 20%, transparent 20%),
+                    radial-gradient(circle, #D4AF37 20%, transparent 20%);
+  background-size: 10px 10px;
+  background-position: 0 0, 5px 5px;
+}
