@@ -50,9 +50,9 @@ export const EventDetails: React.FC<EventDetailsProps> = ({ onOpenRSVP }) => {
     {
       title: "நிச்சயதார்த்தம் (Engagement Welcoming)",
       subtitle: "Nichayathartham & Welcoming",
-      date: "Saturday, September 12, 2026",
+      date: "Monday, May 18, 2026",
       time: "5:00 PM - 8:30 PM IST",
-      description: "Welcoming of families, traditional ring updates, followed by a music recital and dinner.",
+      description: "Welcoming of families, traditional ring updates, followed by a music recital and dinner. - Function Finished",
       venue: "AG Mahal, Sivakasi",
       icon: <Heart className="w-5 h-5" />
     },
@@ -60,19 +60,19 @@ export const EventDetails: React.FC<EventDetailsProps> = ({ onOpenRSVP }) => {
       title: "திருமணம் (Subha Muhurtham)",
       subtitle: "Holy Marriage Ceremony",
       date: "Sunday, September 13, 2026",
-      time: "9:00 AM - 10:30 AM IST",
+      time: "7:00 AM - 8:30 AM IST",
       description: "The sacred binding ceremony involving the Mangalya Dharanam (tying of the Thali) amidst traditional Getti Melam.",
       venue: "AG Mahal, Sivakasi",
       icon: <Calendar className="w-5 h-5" />,
       featured: true
     },
     {
-      title: "மதிய விருந்து (Wedding Feast)",
+      title: "மதிய விருந்து (Reception & Feast)",
       subtitle: "Kalyana Virundhu & Reception",
       date: "Sunday, September 13, 2026",
-      time: "11:30 AM - 2:30 PM IST",
+      time: "12:30 AM - 2:30 PM IST",
       description: "A grand traditional South Indian banana-leaf feast to celebrate our wedding and thank our guests.",
-      venue: "AG Mahal, Sivakasi",
+      venue: "Mini Mandabam, Thalavaipuram",
       icon: <Clock className="w-5 h-5" />
     }
   ];

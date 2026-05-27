@@ -174,10 +174,15 @@ export const HeroSection: React.FC = () => {
             <span className="font-playfair italic text-xs text-traditional-mustard mt-1 max-w-[200px]">
               Creospace Interior Studio, Sivakasi
             </span>
-            <div className="mt-2.5 opacity-0 pointer-events-none py-1 px-3 text-xs">
-              {/* Mirror structure spacing placeholder */}
+             <a
+              href="tel:+919486631606"
+              className="mt-2.5 flex items-center gap-1.5 bg-traditional-gold/10 border border-traditional-gold/30 hover:bg-traditional-gold/30 hover:border-traditional-gold py-1 px-3 rounded-full text-xs text-traditional-gold font-montserrat transition-all duration-300 pointer-events-auto"
+            >
+              <Phone className="w-3 h-3" /> 9486631606
+            </a>
+            {/* <div className="mt-2.5 opacity-0 pointer-events-none py-1 px-3 text-xs">
               &nbsp;
-            </div>
+            </div> */}
           </motion.div>
 
         </div>
@@ -193,7 +198,7 @@ export const HeroSection: React.FC = () => {
             "Designing our spaces, coding our lives, visualising our forever"
           </p>
           <p className="font-montserrat text-sm md:text-base text-traditional-cream/80 tracking-wide leading-relaxed">
-            With the divine blessings of Lord Ganesha and our beloved families, we cordially invite you to join us on this auspicious occasion of our wedding celebration as we exchange our vows and begin our sacred journey of togetherness.
+            With the divine blessings of GOD and our beloved families, we cordially invite you to join us on this auspicious occasion of our wedding celebration as we exchange our vows and begin our sacred journey of togetherness.
           </p>
           
           <div className="flex items-center justify-center gap-4 py-4">

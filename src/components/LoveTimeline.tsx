@@ -12,7 +12,7 @@ export const LoveTimeline: React.FC = () => {
       icon: <Heart className="w-5 h-5 text-[#b4141e]" />,
     },
     {
-      year: "2023",
+      year: "2025",
       title: "கனவுகளை நோக்கி... (Building Dreams)",
       tamilDesc: "பொறியியலும் கலையும் இணைந்த காலம்.",
       description: "Supporting each other's aspirations. One coding software in Chennai, the other visualizing space and interior design in Sivakasi. Coding and designing our shared future.",
@@ -24,17 +24,17 @@ export const LoveTimeline: React.FC = () => {
       ),
     },
     {
-      year: "2025",
+      year: "2026-05-18",
       title: "நிச்சயதார்த்தம் (The Engagement)",
       tamilDesc: "இரு மனங்கள் இணைந்த நன்னாள்.",
       description: "Our love became a formal promise at AG Mahal, Sivakasi. Surrounded by family blessings, we took our first step toward eternity.",
       icon: <Sparkles className="w-5 h-5 text-amber-500" />,
     },
     {
-      year: "2026",
+      year: "2026-09-13",
       title: "திருமணம் (The Wedding)",
       tamilDesc: "எங்கள் வாழ்வின் புதிய தொடக்கம்.",
-      description: "Design meets Code for a lifetime. On September 13, 2026, we tie the holy knot to build our dream home and live our together-forever.",
+      description: "Design meets Code for a lifetime. On September 13, 2026, we tie the holy knot to build our dream and live our together-forever.",
       icon: (
         <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-traditional-gold">
           <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />

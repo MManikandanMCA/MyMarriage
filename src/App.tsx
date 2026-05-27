@@ -16,15 +16,15 @@ function App() {
   // Interactive Blessings state (Guestbook)
   const [blessings, setBlessings] = useState<BlessingItem[]>([
     {
-      name: "Sundaram & Family",
+      name: "Saravana Kumar & Family",
       message: "மணமக்களுக்கு எங்களது நெஞ்சார்ந்த திருமண நல்வாழ்த்துக்கள்! வாழ்க வளமுடன்!"
     },
     {
-      name: "Anand & Priya (Furtim Team)",
+      name: "Furtim & Mirador Team",
       message: "Congratulations Mani! Wishing you both a lifetime of love, happiness, and clean, compile-ready code in your marriage!"
     },
     {
-      name: "Saritha & Team (Creospace Studio)",
+      name: "Creospace Studio Team",
       message: "Vasuki, wishing you a beautiful future together! May your life be as colourful and visually stunning as your 3D creations!"
     }
   ]);
