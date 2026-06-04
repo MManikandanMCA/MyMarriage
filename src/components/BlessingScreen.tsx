@@ -201,7 +201,7 @@ export const BlessingScreen: React.FC = () => {
         >
           <p>Cordially Invited By</p>
           <p className="text-traditional-cream text-sm font-cinzel font-bold mt-1">
-            Manikandan Muruganantham & Manicka Vasuki Selva Murugesan Families
+            Manikandan Muruganantham & Manicka Vasuki Selva Muniswaran  Familie's
           </p>
         </motion.div>
       </div>

@@ -259,7 +259,7 @@ export const EventDetails: React.FC<EventDetailsProps> = ({ onOpenRSVP }) => {
               src={engagementPhoto}
               alt="Manikandan & Vasuki – Engagement Ceremony"
               className="w-full object-cover object-top"
-              style={{ maxHeight: "480px" }}
+              style={{ maxHeight: "780px" }}
             />
             {/* Overlay label */}
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-traditional-maroon-dark/90 to-transparent px-6 py-5 text-center">

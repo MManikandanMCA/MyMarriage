@@ -48,7 +48,7 @@ export const MainInvitation: React.FC<MainInvitationProps> = ({ onOpenRSVP, bles
 
       {/* Structured Sections with Framer Motion reveal transitions */}
       <div className="relative z-10">
-        
+
         {/* Section 1: Welcoming Hero Banner */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -73,12 +73,18 @@ export const MainInvitation: React.FC<MainInvitationProps> = ({ onOpenRSVP, bles
 
         {/* Section 4: Blessing screen at bottom */}
         <BlessingScreen />
-        
+
       </div>
 
       {/* Footer Details */}
-      <div className="relative z-20 py-8 bg-traditional-maroon-dark/95 border-t border-traditional-gold/20 text-center text-[10px] md:text-xs text-traditional-cream/40 font-montserrat uppercase tracking-[0.15em] select-none">
-        <span>© 2026 Manikandan & Vasuki Wedding. Made with Love & Blessings.</span>
+      <div className="relative z-20 py-8 bg-traditional-maroon-dark/95 border-t border-traditional-gold/20 text-center text-[10px] md:text-xs text-traditional-cream/40 font-montserrat tracking-[0.15em] select-none">
+        <p>© 2026 Manikandan & Vasuki Wedding. Made with Love & Blessings.</p>
+        <p className="mt-2 text-traditional-cream/30">
+          Built with ♥ by the Groom — because even love deserves clean code.
+        </p>
+        <p className="mt-1 text-traditional-cream/20 font-mono">
+          git commit -m "Forever Together" • git merge "Love" into "Marriage" • git build
+        </p>
       </div>
     </div>
   );

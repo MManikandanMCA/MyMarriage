@@ -98,7 +98,7 @@ export const HeroSection: React.FC = () => {
             </div>
             
             <h3 className="mt-4 font-cinzel text-xl md:text-2xl text-traditional-gold font-bold tracking-wide">
-              M. மணிகண்டன்
+              M. மணிகண்டன் MCA.
             </h3>
             <span className="font-montserrat text-xs tracking-wider text-traditional-cream/70 uppercase mt-1 flex items-center gap-1">
               <Laptop className="w-3.5 h-3.5 text-traditional-mustard" /> Software Engineer
@@ -166,7 +166,7 @@ export const HeroSection: React.FC = () => {
             </div>
             
             <h3 className="mt-4 font-cinzel text-xl md:text-2xl text-traditional-gold font-bold tracking-wide">
-              S. மாணிக்கவாசுகி
+              S. மணிக்க வாசுகி BCA.
             </h3>
             <span className="font-montserrat text-xs tracking-wider text-traditional-cream/70 uppercase mt-1 flex items-center gap-1">
               <Compass className="w-3.5 h-3.5 text-traditional-mustard" /> 3D Visualizer
