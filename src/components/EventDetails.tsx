@@ -204,8 +204,8 @@ export const EventDetails: React.FC<EventDetailsProps> = ({ onOpenRSVP }) => {
       date: "Sunday, September 13, 2026",
       time: "7:00 AM - 8:30 AM IST",
       description: "The sacred binding ceremony involving the Mangalya Dharanam (tying of the Thali) amidst traditional Getti Melam.",
-      venue: "AG Mahal, Sivakasi",
-      mapsUrl: "https://maps.google.com/?q=AG+Mahal,+Sivakasi,+Tamil+Nadu",
+      venue: "KSSP Kalyana Mahal, Sivakasi",
+      mapsUrl: "https://www.google.com/maps/place/KSSP+Kalyana+mahal/@9.4520972,77.8021405,1101m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3b06cee5613430cd:0x83cae9f9cf24f244!8m2!3d9.4520972!4d77.8021405!16s%2Fg%2F11bwn5zjcw?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D",
       icon: <Calendar className="w-5 h-5" />,
       featured: true
     },
