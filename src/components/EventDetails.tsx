@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import { Calendar, MapPin, Clock, Heart, ChevronLeft, ChevronRight } from "lucide-react";
+import { Calendar, MapPin, Clock, Heart } from "lucide-react";
 import engagementPhoto from "../assets/engagement.jpg";
 
 interface EventDetailsProps {
@@ -14,137 +14,8 @@ const MONTH_NAMES = [
 ];
 const DAY_NAMES = ["Su","Mo","Tu","We","Th","Fr","Sa"];
 
-interface EventMark {
-  month: number; // 0-indexed
-  year: number;
-  days: { day: number; label: string; color: string }[];
-}
 
-const EVENT_MARKS: EventMark[] = [
-  {
-    month: 4, // May
-    year: 2026,
-    days: [{ day: 18, label: "Engagement", color: "#D4AF37" }]
-  },
-  {
-    month: 8, // September
-    year: 2026,
-    days: [
-      { day: 13, label: "Muhurtham", color: "#b4141e" },
-      { day: 13, label: "Reception", color: "#e1a95f" }
-    ]
-  }
-];
 
-const WeddingCalendar: React.FC = () => {
-  const today = new Date();
-  const [viewYear, setViewYear] = useState(2026);
-  const [viewMonth, setViewMonth] = useState(4); // May 2026
-
-  const firstDay = new Date(viewYear, viewMonth, 1).getDay();
-  const daysInMonth = new Date(viewYear, viewMonth + 1, 0).getDate();
-
-  const mark = EVENT_MARKS.find(m => m.month === viewMonth && m.year === viewYear);
-
-  const prevMonth = () => {
-    if (viewMonth === 0) { setViewMonth(11); setViewYear(y => y - 1); }
-    else setViewMonth(m => m - 1);
-  };
-  const nextMonth = () => {
-    if (viewMonth === 11) { setViewMonth(0); setViewYear(y => y + 1); }
-    else setViewMonth(m => m + 1);
-  };
-
-  const cells: (number | null)[] = [
-    ...Array(firstDay).fill(null),
-    ...Array.from({ length: daysInMonth }, (_, i) => i + 1)
-  ];
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.8 }}
-      className="royal-card rounded-2xl p-6 max-w-sm mx-auto"
-    >
-      {/* Header */}
-      <div className="flex items-center justify-between mb-4">
-        <button
-          onClick={prevMonth}
-          className="w-8 h-8 rounded-full border border-traditional-gold/40 flex items-center justify-center text-traditional-gold hover:bg-traditional-gold/20 transition-colors duration-200"
-        >
-          <ChevronLeft className="w-4 h-4" />
-        </button>
-        <h3 className="font-cinzel text-base font-bold text-traditional-gold tracking-widest uppercase">
-          {MONTH_NAMES[viewMonth]} {viewYear}
-        </h3>
-        <button
-          onClick={nextMonth}
-          className="w-8 h-8 rounded-full border border-traditional-gold/40 flex items-center justify-center text-traditional-gold hover:bg-traditional-gold/20 transition-colors duration-200"
-        >
-          <ChevronRight className="w-4 h-4" />
-        </button>
-      </div>
-
-      {/* Day headers */}
-      <div className="grid grid-cols-7 gap-1 mb-2">
-        {DAY_NAMES.map(d => (
-          <div key={d} className="text-center text-[10px] font-cinzel font-bold text-traditional-gold/50 uppercase">
-            {d}
-          </div>
-        ))}
-      </div>
-
-      {/* Cells */}
-      <div className="grid grid-cols-7 gap-1">
-        {cells.map((day, i) => {
-          if (!day) return <div key={`e-${i}`} />;
-          const eventDay = mark?.days.find(e => e.day === day);
-          const isToday =
-            day === today.getDate() &&
-            viewMonth === today.getMonth() &&
-            viewYear === today.getFullYear();
-
-          return (
-            <div
-              key={day}
-              title={eventDay?.label}
-              className={`relative flex items-center justify-center rounded-full w-8 h-8 mx-auto text-xs font-montserrat font-semibold transition-all duration-200
-                ${eventDay ? "text-traditional-maroon-dark font-extrabold" : "text-traditional-cream/70"}
-                ${isToday && !eventDay ? "border border-traditional-gold/40" : ""}
-              `}
-              style={eventDay ? { backgroundColor: eventDay.color, boxShadow: `0 0 10px ${eventDay.color}88` } : {}}
-            >
-              {day}
-              {eventDay && (
-                <span className="absolute -bottom-3.5 left-1/2 -translate-x-1/2 text-[7px] whitespace-nowrap text-traditional-gold font-cinzel leading-tight hidden sm:block">
-                  {eventDay.label.split(" ")[0]}
-                </span>
-              )}
-            </div>
-          );
-        })}
-      </div>
-
-      {/* Legend */}
-      <div className="mt-6 flex flex-wrap gap-3 justify-center">
-        <div className="flex items-center gap-1.5">
-          <span className="w-3 h-3 rounded-full bg-[#D4AF37] inline-block" />
-          <span className="text-[10px] font-cinzel text-traditional-cream/60 uppercase tracking-wider">Engagement</span>
-        </div>
-        <div className="flex items-center gap-1.5">
-          <span className="w-3 h-3 rounded-full bg-[#b4141e] inline-block" />
-          <span className="text-[10px] font-cinzel text-traditional-cream/60 uppercase tracking-wider">Muhurtham</span>
-        </div>
-        <div className="flex items-center gap-1.5">
-          <span className="w-3 h-3 rounded-full bg-[#e1a95f] inline-block" />
-          <span className="text-[10px] font-cinzel text-traditional-cream/60 uppercase tracking-wider">Reception</span>
-        </div>
-      </div>
-    </motion.div>
-  );
-};
 
 // ─── Main Component ───────────────────────────────────────────────────────────
 export const EventDetails: React.FC<EventDetailsProps> = ({ onOpenRSVP }) => {

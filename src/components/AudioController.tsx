@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Volume2, VolumeX, Music } from "lucide-react";
+import { Volume2, Music } from "lucide-react";
 
 interface AudioControllerProps {
   splashActive: boolean;
